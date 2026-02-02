@@ -1,0 +1,26 @@
+
+.nav > svg {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+path:hover {
+    filter: invert(100%)
+}
+
+.nav path {
+    stroke: var(--primary);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.nav > :first-child{
+    rotate: 180deg !important;
+}
+
+.nav {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

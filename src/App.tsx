@@ -1,29 +1,16 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { Route, Routes } from "react-router";
+import HomePage from "./pages/Home.tsx";
+import AboutMePage from "./pages/AboutMe.tsx";
 function App() {
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>     
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-          <select id='lang-select'>
-            <option>English</option>
-            <option>German</option>
-          </select>
-      <a id='src-link' href="http://example.com">Source code of this site</a>
-    </>
-  )
+  return <>
+    
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/about-me" element={<AboutMePage/>}/>
+      <Route path="/*" element={<>Not Found</>}/>
+    </Routes>
+  </>;
 }
 
-export default App
+export default App;
