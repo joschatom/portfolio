@@ -14,12 +14,21 @@ function HomePage() {
     <>
       <LanguageSelector />
 
-      <h1>{t((k) => k.title, { test: "test " })}</h1>
-
       <a id="src-link" href="http://example.com">
         {t((k) => k["src-link"])}
       </a>
 
+      <div className="bg">
+      </div>
+        <div className="box">
+          <h1>{t((k) => k.heading)}</h1>
+          <h2>AAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
+          <div className="quicklinks">
+            <button>About Me</button>
+            <button>Projects</button>
+            <button>Socials</button>
+          </div>
+        </div>
       <div className="nav">
         <svg viewBox="0 0 24 24" onClick={() => navigate(-1)}>
           <path d="M5 12H19M19 12L13 6M19 12L13 18" />
@@ -30,7 +39,7 @@ function HomePage() {
         </svg>
       </div>
 
-      <Navigation next="/about-me" prev="/"/>
+      <Navigation next="/about-me" prev="/" />
     </>
   );
 }

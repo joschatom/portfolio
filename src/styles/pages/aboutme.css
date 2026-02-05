@@ -1,0 +1,23 @@
+
+
+
+
+
+.viewport {
+    text-align: justify;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    gap: 20px;
+    overflow-x: wrap;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: scale-down;
+    border-radius: 20px;
+    padding: 0;
+    border: solid transparent;
+}

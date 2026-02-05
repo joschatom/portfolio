@@ -1,0 +1,36 @@
+.quicklinks {
+  display: flex;
+  gap: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quicklinks button {
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 28px;
+  color: white;
+  width:  120%;
+}
+
+.quicklinks button:hover {
+  border-color: white;
+}
+
+h1 {
+  font-size: 72px;
+  color: white;
+  text-shadow:
+    1px 1px 50px rgba(76, 0, 255, 0.212),
+    -1em 0 20em rgb(108, 40, 218),
+    -25px -25px 20em blue;
+}
+
+.box {
+  position: fixed;
+  top: 120px;
+  left: 120px;
+}
+

@@ -4,10 +4,14 @@
   left: 10px;
 }
 
+body {
+  margin: unset;
+ }
+
 :root {
   background-color: #00000aF2;
   --primary: rgba(255, 45, 45, 0.75);
-  color: var(--primary);
+  color: white;
   font-size: 24px;
 }
 

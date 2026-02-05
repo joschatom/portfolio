@@ -13,4 +13,10 @@ export default {
   aboutme: {
     title: "About me",
   },
+  projects: {
+    title: "Projects",
+    antos: {
+      name: "Ant Operating System"
+    }
+  }
 };
