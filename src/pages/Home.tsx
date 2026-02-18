@@ -25,8 +25,8 @@ function HomePage() {
         <h1>{t((k) => k.heading)}</h1>
         <h2>A software developer  from Switzerland</h2>
         <div className="quicklinks">
-          <button onClick={() => navigate("/about-me")}>{getFixedT(null, "aboutme")(k => k.title)}</button>
-          <button onClick={() => navigate("/projects")}>{getFixedT(null, "projects")(k => k.title)}</button>
+          <button onClick={() => navigate("about-me")}>{getFixedT(null, "aboutme")(k => k.title)}</button>
+          <button onClick={() => navigate("projects")}>{getFixedT(null, "projects")(k => k.title)}</button>
         </div>
       </div>
 

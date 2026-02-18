@@ -1,6 +1,6 @@
 # Sitemap
 
 Homepage: /
-About Me: /about-me
+About Me: /protfolio/about-me
 Projects: /projects
 Socials: /socials
