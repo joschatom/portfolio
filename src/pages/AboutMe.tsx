@@ -3,7 +3,7 @@ import "../styles/pages/aboutme.css";
 import LanguageSelector from "../components/LanguageSelector";
 import useTranslatedTitle from "../helpers/useTranslatedTitle";
 import Navigation from "../components/Navigation";
-import photo from "../assets/photo.jpg"
+import photo from "../assets/photo.jpg";
 
 function AboutMePage() {
   const { t } = useTranslation("aboutme");
@@ -11,29 +11,38 @@ function AboutMePage() {
 
   return (
     <>
-      <h1>{t((k) => k.title)}</h1>
       <LanguageSelector />
       <Navigation next="/projects" prev="/" />
       <div className="viewport">
-        <p>
-          My name is Joscha Egloff and I'm currently 16 Years old and very
-          passionate about programming. I've been programming for already 5
-          years as a hobby. I'm intrested in all kinds of areas from osdev to
-          webdev and am currently doing a practical year.
-        </p>
-        <img src={photo}/>
-        <p>
-          My name is Joscha Egloff and I'm currently 16 Years old and very
-          passionate about programming. I've been programming for already 5
-          years as a hobby. I'm intrested in all kinds of areas from osdev to
-          webdev and am currently doing a practical year.
-        </p>
-        <p>
-          My name is Joscha Egloff and I'm currently 16 Years old and very
-          passionate about programming. I've been programming for already 5
-          years as a hobby. I'm intrested in all kinds of areas from osdev to
-          webdev and am currently doing a practical year.
-        </p>
+        <div>
+          <h1 className="general">{t(k => k.title)}</h1>
+
+          <p>{t(k => k.summary)}</p>
+          <p>{t(k => k.interest)}</p>
+
+          <h2 className="today">{t(k => k.heading)}</h2>
+
+          <p>
+            {t(k => k.today)}
+          </p>
+        </div>
+        <div>
+          <div>
+            <img src={photo} />
+            <ul>
+              <li>
+                <a href="http://github.com">E-Mail</a>
+              </li>
+              <li>
+                <a href="http://github.com">Github</a>
+              </li>{" "}
+            
+              <li>
+                <a href="http://github.com">Link</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </>
   );

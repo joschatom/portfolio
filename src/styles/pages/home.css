@@ -30,7 +30,8 @@ h1 {
 
 .box {
   position: fixed;
-  top: 120px;
-  left: 120px;
 }
 
+h2 {
+  color: var(--primary);
+}

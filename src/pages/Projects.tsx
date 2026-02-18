@@ -1,21 +1,30 @@
 import { useTranslation } from "react-i18next";
 import useTranslatedTitle from "../helpers/useTranslatedTitle";
 import Navigation from "../components/Navigation";
+import en from "../i18n/en";
 
-import "../styles/pages/projects.css"
+import "../styles/pages/projects.css";
+import LanguageSelector from "../components/LanguageSelector";
 
-function ProjectEntry({ name, desc, links }: { name: string, desc: string, links: Record<string, string> }) {
- 
+function ProjectEntry({
+  name,
+  desc,
+  links,
+}: {
+  name: string;
+  desc: string;
+  links: Record<string, string>;
+}) {
   return (
-    <>
-      <h2>
-        {name}
-      </h2>
-      <h4>{desc}</h4>
+    <div className="project">
+      <h2>{name}</h2>
+      <p>{desc}</p>
       <div className="links">
-        {Object.entries(links).map(([name, url]) => <a href={url}>{name}</a>)}
+        {Object.entries(links).map(([name, url]) => (
+          <a href={url}>{name}</a>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
@@ -24,21 +33,26 @@ function ProjectPage() {
   useTranslatedTitle(t, {});
 
   return (
-    <>
-      <h1>Projects</h1>
+    <div className="projects">
+      <h1>{t(k => k.title)}</h1>
 
       <div className="project-container">
-        <ProjectEntry  name="AntOS Project" desc="Simple operating system" links={{
-            "Github": "github.com",
-            "Abc": "abc.invalid",
-        }}/>
-        <ProjectEntry name="Flake Lang" desc="Flake Programming Language" links={{
-            Github: "github.com"
-        }}/>
+        {en.projects.projects.map((e, i) => {
+          return (
+            <ProjectEntry
+              name={t((k) => k.projects[i].name)}
+              desc={t(k => k.projects[i].desc)}
+              links={e.links}
+              key={i}
+            />
+            
+          );
+        })}
       </div>
 
       <Navigation prev="/about-me" next="/" />
-    </>
+      <LanguageSelector/>
+    </div>
   );
 }
 

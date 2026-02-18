@@ -15,7 +15,7 @@ path:hover {
     stroke-linejoin: round;
 }
 
-.nav > :first-child{
+.back{
     rotate: 180deg !important;
 }
 

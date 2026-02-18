@@ -4,9 +4,11 @@ import LanguageSelector from "../components/LanguageSelector";
 import useTranslatedTitle from "../helpers/useTranslatedTitle";
 import { useNavigate } from "react-router";
 import Navigation from "../components/Navigation";
+import { getFixedT } from "i18next";
 
 function HomePage() {
-  const { t } = useTranslation("home");
+  const { t} = useTranslation("home");
+
   const navigate = useNavigate();
   useTranslatedTitle(t);
 
@@ -18,25 +20,14 @@ function HomePage() {
         {t((k) => k["src-link"])}
       </a>
 
-      <div className="bg">
-      </div>
-        <div className="box">
-          <h1>{t((k) => k.heading)}</h1>
-          <h2>AAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
-          <div className="quicklinks">
-            <button>About Me</button>
-            <button>Projects</button>
-            <button>Socials</button>
-          </div>
+      <div className="bg"></div>
+      <div className="box">
+        <h1>{t((k) => k.heading)}</h1>
+        <h2>A software developer  from Switzerland</h2>
+        <div className="quicklinks">
+          <button onClick={() => navigate("/about-me")}>{getFixedT(null, "aboutme")(k => k.title)}</button>
+          <button onClick={() => navigate("/projects")}>{getFixedT(null, "projects")(k => k.title)}</button>
         </div>
-      <div className="nav">
-        <svg viewBox="0 0 24 24" onClick={() => navigate(-1)}>
-          <path d="M5 12H19M19 12L13 6M19 12L13 18" />
-        </svg>
-
-        <svg viewBox="0 0 24 24" onClick={() => navigate("/about-me")}>
-          <path d="M5 12H19M19 12L13 6M19 12L13 18" />
-        </svg>
       </div>
 
       <Navigation next="/about-me" prev="/" />

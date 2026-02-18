@@ -2,3 +2,30 @@
     display: flex;
     gap: 20px
 }
+
+.projects {
+    padding-bottom: 0px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    max-height: 480px;
+    overflow: scroll;
+    scrollbar-width: none
+}
+
+.project:hover {
+    background: rgba(2, 56, 44, 0.267);
+    border-radius: 20px;
+    
+}
+
+.project {
+    padding: 10px;
+}
+
+p{
+    padding-left: 0px;
+}

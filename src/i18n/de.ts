@@ -12,4 +12,8 @@ export default {
   aboutme: {
     title: "Über mich",
   },
+  projects: {
+    title: "Projekte"
+  },
+
 };
