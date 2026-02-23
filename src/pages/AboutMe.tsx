@@ -31,14 +31,10 @@ function AboutMePage() {
             <img src={photo} />
             <ul>
               <li>
-                <a href="http://github.com">E-Mail</a>
+                <a href="mailto:joscha.egloff@pm.me">E-Mail</a>
               </li>
               <li>
-                <a href="http://github.com">Github</a>
-              </li>{" "}
-            
-              <li>
-                <a href="http://github.com">Link</a>
+                <a href="http://github.com/joschatom">Github</a>
               </li>
             </ul>
           </div>
