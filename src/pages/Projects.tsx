@@ -13,7 +13,7 @@ function ProjectEntry({
 }: {
   name: string;
   desc: string;
-  links: Record<string, string>;
+  links: object;
 }) {
   return (
     <div className="project">
